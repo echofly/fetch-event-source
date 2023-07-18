@@ -2,7 +2,7 @@
   "name": "@echofly/fetch-event-source",
   "version": "3.0.1",
   "description": "A better API for making Event Source requests, with all the features of fetch()",
-  "homepage": "https://github.com/Azure/fetch-event-source#readme",
+  "homepage": "https://github.com/echofly/fetch-event-source#readme",
   "repository": "github:echofly/fetch-event-source",
   "bugs": {
     "url": "https://github.com/echofly/fetch-event-source/issues"
