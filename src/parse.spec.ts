@@ -194,12 +194,12 @@ describe('parse', () => {
                 ++msgNum;
                 expect(msg).toEqual({
                     retry: 42,
-                    id: 'abc',
+                    id: ' abc',
                     event: 'def',
                     data: 'ghi'
                 });
             }, id => {
-                expect(id).toEqual('abc');
+                expect(id).toEqual(' abc');
             }, retry => {
                 expect(retry).toEqual(42);
             });
@@ -220,13 +220,13 @@ describe('parse', () => {
             const next = parse.getMessages(msg => {
                 ++msgNum;
                 expect(msg).toEqual({
-                    id: 'abc',
+                    id: ' abc',
                     data: '',
                     event: '',
                     retry: undefined,
                 });
             }, id => {
-                expect(id).toEqual('abc');
+                expect(id).toEqual(' abc');
             }, _retry => {
                 fail('retry should not be called');
             });
@@ -272,7 +272,7 @@ describe('parse', () => {
                 expect(msg).toEqual({
                     retry: undefined,
                     id: '123',
-                    event: 'foo ',
+                    event: ' foo ',
                     data: '',
                 });
             }, id => {
@@ -298,7 +298,7 @@ describe('parse', () => {
             const next = parse.getMessages(msg => {
                 ++msgNum;
                 expect(msg).toEqual({
-                    data: 'YHOO\n+2\n\n10',
+                    data: 'YHOO\n +2\n\n 10',
                     id: '',
                     event: '',
                     retry: undefined,
@@ -322,7 +322,7 @@ describe('parse', () => {
 
         it('should reset id if sent multiple times', () => {
             // arrange:
-            const expectedIds = ['foo', ''];
+            const expectedIds = [' foo', ''];
             let idsIdx = 0;
             let msgNum = 0;
             const next = parse.getMessages(msg => {
