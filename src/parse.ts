@@ -134,7 +134,8 @@ export function getMessages(
             // line is of format "<field>:<value>" or "<field>: <value>"
             // https://html.spec.whatwg.org/multipage/server-sent-events.html#event-stream-interpretation
             const field = decoder.decode(line.subarray(0, fieldLength));
-            const valueOffset = fieldLength + (line[fieldLength + 1] === ControlChars.Space ? 2 : 1);
+            // Don't filter spaces before <value>
+            const valueOffset = fieldLength + 1;
             const value = decoder.decode(line.subarray(valueOffset));
 
             switch (field) {
