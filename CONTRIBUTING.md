@@ -7,7 +7,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/Azure/fetch-event-source/issues) is
+The [issue tracker](https://github.com/echofly/fetch-event-source/issues) is
 the preferred channel for [bug reports](#bugs), [features requests](#features)
 and [submitting pull requests](#pull-requests).
 

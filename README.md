@@ -17,7 +17,7 @@ In addition, this library also plugs into the browser's [Page Visibility API](ht
 
 # Install
 ```sh
-npm install @microsoft/fetch-event-source
+npm install @echofly/fetch-event-source
 ```
 
 # Usage
@@ -29,7 +29,7 @@ sse.onmessage = (ev) => {
 };
 
 // AFTER:
-import { fetchEventSource } from '@microsoft/fetch-event-source';
+import { fetchEventSource } from '@echofly/fetch-event-source';
 
 await fetchEventSource('/api/sse', {
     onmessage(ev) {

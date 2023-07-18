@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 3.0.1
+- Don't filter spaces before data value
+
 ## 3.0.0
 - Adjust parse.getMessages signature
 - Add node.js support
